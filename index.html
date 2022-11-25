@@ -11,30 +11,67 @@
 		/>
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<link rel="stylesheet" href="./style.css" />
-		<title>Shopify Developers Platform—Build. Innovate.</title>
+		<title>Shopify Developers Platform—Build. Innovate. Get paid.</title>
 	</head>
 
 	<body class="theme-light">
 		<header>
 			<nav>
-				<ul class="header__navigation-left">
-					<li><a href="#">Apps</a></li>
-					<li><a href="#">Themes</a></li>
-					<li><a href="#">Custom storefronts</a></li>
-					<li><a href="#">Marketplaces</a></li>
-					<li>
-						<a href="#">APIs and references</a>
-						<ul style="display: none">
-							<li><a href="#">GraphQL Admin API</a></li>
-							<li><a href="#">REST Admin API</a></li>
-							<li><a href="#">Liquid</a></li>
-							<li><a href="#">Ajax API</a></li>
-							<li><a href="#">Storefront API</a></li>
-							<li><a href="#">Hydrogen</a></li>
-							<li><a href="#">View All</a></li>
-						</ul>
-					</li>
-				</ul>
+				<div class="navigation__left-container">
+					<div class="logo__container">
+						<img src="./img/shopify-dev-logo.svg" alt="Shopify logo." />
+					</div>
+
+					<ul class="header__navigation-left">
+						<li><a href="#">Apps</a></li>
+						<li><a href="#">Themes</a></li>
+						<li><a href="#">Custom storefronts</a></li>
+						<li><a href="#">Marketplaces</a></li>
+						<li>
+							<a href="#" data-dropdown
+								>APIs and references
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="10"
+									height="10"
+									viewBox="0 0 24 24"
+									style="fill: #6d7175"
+								>
+									<path
+										d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+									></path>
+								</svg>
+							</a>
+
+							<ul class="hidden" data-dropdown-content>
+								<li><p>Apps</p></li>
+								<li>
+									<a class="nav__dropdown-item" href="#">GraphQL Admin API</a>
+								</li>
+								<li>
+									<a class="nav__dropdown-item" href="#">REST Admin API</a>
+								</li>
+
+								<li><p>Themes</p></li>
+								<li><a class="nav__dropdown-item" href="#">Liquid</a></li>
+								<li><a class="nav__dropdown-item" href="#">Ajax API</a></li>
+
+								<li><p>Custom storefronts</p></li>
+								<li>
+									<a class="nav__dropdown-item" href="#">Storefront API</a>
+								</li>
+								<li><a class="nav__dropdown-item" href="#">Hydrogen</a></li>
+								<li>
+									<a
+										class="nav__dropdown-item nav__dropdown-item--seperated"
+										href="#"
+										>View all</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 
 				<div class="navigation__right-container">
 					<div class="search-bar__container">
@@ -203,7 +240,9 @@
 			<section class="docs-banner">
 				<div class="docs-banner__container">
 					<div>
-						<h2 class="docs-banner__title gutter-bottom">Launch your app or theme to millions of merchants</h2>
+						<h2 class="docs-banner__title gutter-bottom">
+							Launch your app or theme to millions of merchants
+						</h2>
 						<div class="gutter-bottom">
 							<h3>App Store</h3>
 							<p>
@@ -247,6 +286,219 @@
 					</ul>
 				</div>
 			</section>
+
+			<section class="community__container">
+				<div class="community__link community__link--borderless">
+					<img
+						class="community__img"
+						src="./img/icon-community.avif"
+						width="160"
+					/>
+					<h4 class="community__title">Join a community of builders</h4>
+				</div>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/forums.webp"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">Developer Forums</p>
+						<p class="community__description">
+							Q&A and advice from Shopify community experts
+						</p>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/slack.png"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">#development on Slack</p>
+						<p class="community__description">
+							Collaboration and connection with Shopify employees
+						</p>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/twitter.png"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">@ShopifyDevs on Twitter</p>
+						<p class="community__description">
+							Product announcements, API updates, tips and more
+						</p>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/changelog.avif"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">Developer Changelog</p>
+						<p class="community__description">
+							The latest Shopify ecosystem updates
+						</p>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/youtube.avif"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">ShopifyDevs YouTube channel</p>
+						<p class="community__description">
+							Tips and insight in dev and design
+						</p>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/discord.webp"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">ShopifyDevs Discord server</p>
+						<p class="community__description">
+							Chat with other Shopify developers
+						</p>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="community__link">
+						<img
+							class="community__img"
+							src="./img/shopify.avif"
+							alt=""
+							width="50"
+						/>
+						<p class="community__title">Shopify Partners blog</p>
+						<p class="community__description">
+							Educational resources and product previews
+						</p>
+					</div>
+				</a>
+			</section>
+
+			<footer class="footer__top">
+				<div class="footer__items-grid">
+					<div>
+						<h3 class="footer__item-heading">News and updates</h3>
+						<ul class="footer__item-list">
+							<li><a href="#">Developer changelog</a></li>
+							<li><a href="#">Shopify status</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="footer__item-heading">Blogs</h3>
+						<ul class="footer__item-list">
+							<li><a href="#">Partner blog</a></li>
+							<li><a href="#">Engineering blog</a></li>
+							<li><a href="#">UX blog</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="footer__item-heading">Community</h3>
+						<ul class="footer__item-list">
+							<li><a href="#">Developer forums</a></li>
+							<li><a href="#">Devs Discord</a></li>
+							<li><a href="#">Facebook group</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="footer__item-heading">Social</h3>
+						<ul class="footer__item-list">
+							<li><a href="#">Twitch</a></li>
+							<li><a href="#">YouTube</a></li>
+							<li><a href="#">Twitter</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="footer__item-heading">Events</h3>
+						<ul class="footer__item-list">
+							<li><a href="#">Unite</a></li>
+							<li><a href="#">Meetups</a></li>
+							<li><a href="#">Partner Town Hall</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="footer__item-heading">Legal</h3>
+						<ul class="footer__item-list">
+							<li><a href="#">Terms of Service</a></li>
+							<li><a href="#">API Terms of Service</a></li>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Partner program agreement</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__nav">
+					<ul class="footer-nav__list" role="list">
+						<li class="footer-nav__list-item">
+							<a href="https://www.shopify.com/about">About Shopify</a>
+						</li>
+
+						<li class="footer-nav__list-item">
+							<a href="https://www.shopify.com/plus">Shopify Plus</a>
+						</li>
+
+						<li class="footer-nav__list-item">
+							<a href="https://www.shopify.com/careers">Careers</a>
+						</li>
+
+						<li class="footer-nav__list-item">
+							<a href="https://investors.shopify.com/">Investors</a>
+						</li>
+
+						<li class="footer-nav__list-item">
+							<a href="https://www.shopify.com/press">Press and Media</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
 		</main>
+
+		<script>
+			document
+				.querySelector('[data-dropdown]')
+				.addEventListener('click', function (e) {
+					if (!e.target.closest('li')) return;
+
+					e.target.closest('a') &&
+						e.target.closest('a').classList.toggle('is-active');
+
+					document
+						.querySelector('[data-dropdown-content]')
+						.classList.toggle('hidden');
+				});
+		</script>
 	</body>
 </html>
