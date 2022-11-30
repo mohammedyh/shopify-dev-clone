@@ -46,11 +46,10 @@ html:focus-within {
 body {
 	min-height: 100vh;
 	font-family: 'Inter', sans-serif;
-	text-rendering: optimizeSpeed;
+	text-rendering: optimizeLegibility;
 	line-height: 1.5;
 }
 
-/* Move below rules somewhere appropriate */
 .theme-light {
 	background-color: #fff;
 	color: #0d1213;
@@ -79,7 +78,6 @@ button {
 	font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
 	html:focus-within {
 		scroll-behavior: auto;
@@ -293,11 +291,17 @@ main p a {
 }
 
 .hero__illustration {
-	flex: 1.5;
-	background: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/halloween/hero-1-2x-b0a493fe272b53baf44c27c7ff169ae2b563e346e46325262ca364c61c6cdd01.png');
-	background-repeat: no-repeat;
+	background: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/halloween/hero-1-2x-b0a493fe272b53baf44c27c7ff169ae2b563e346e46325262ca364c61c6cdd01.png')
+		no-repeat;
 	background-size: auto 1128px;
 	min-height: 1128px;
+}
+
+.hero__illustration--mobile,
+.hero__illustration-2--mobile,
+.hero__illustration-3--mobile {
+	display: none;
+	height: 365px;
 }
 
 .docs-banner {
@@ -448,16 +452,109 @@ main p a {
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 1000px) {
+/* 1000px */
+@media screen and (max-width: 62.5rem) {
+	.hero {
+		grid-template-columns: 1fr;
+	}
+
+	.hero__features {
+		margin-bottom: 3rem;
+	}
+
+	.hero__illustration {
+		display: none;
+	}
+
+	.hero__illustration--mobile,
+	.hero__illustration-2--mobile,
+	.hero__illustration-3--mobile {
+		display: block;
+	}
+
+	.hero__illustration--mobile {
+		background: url('./img/hero-1-mobile.png') center center/cover no-repeat;
+		order: -1;
+	}
+
+	.hero__illustration-2--mobile {
+		background: url('./img/hero-2-tablet.png') center center/cover no-repeat;
+	}
+
+	.hero__illustration-3--mobile {
+		background: url('./img/hero-3-tablet.png') center center/cover no-repeat;
+	}
+
+	.hero__content {
+		padding: 0;
+		margin: 0 auto;
+		max-width: 640px;
+		justify-self: start;
+	}
+
+	.docs-banner {
+		padding: 4rem 2rem;
+		margin: 5rem auto 0;
+		max-width: 50rem;
+	}
+
+	.docs-banner__container {
+		grid-template-columns: 1fr;
+	}
+
+	.stats-box__container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.stats-box__row p {
+		font-size: 0.875rem;
+	}
+
+	.stats-box__row strong {
+		font-size: 1rem;
+	}
+
 	.community__container {
 		grid-template-columns: 1fr 1fr;
+		max-width: 44rem;
+		margin: 2rem auto 0;
 	}
 }
 
-@media screen and (max-width: 640px) {
+/* 880px */
+@media screen and (max-width: 55rem) {
+	.hero__heading {
+		font-size: 2rem;
+		letter-spacing: -0.9px;
+	}
+}
+
+/* 640px */
+@media screen and (max-width: 40rem) {
+	.hero__content {
+		padding: 1rem;
+	}
+
+	.docs-banner {
+		padding: 4rem 1rem;
+	}
+
+	.docs-banner__title {
+		font-size: 1.5rem;
+	}
+
+	.stats-box__container {
+		padding: 3rem 1.5rem;
+	}
+
+	.hero-links__container,
+	.community__container {
+		grid-template-columns: 1fr;
+	}
+
 	.community__container {
 		margin: 5rem 1rem 0;
-		grid-template-columns: 1fr;
 	}
 
 	.footer__top {
