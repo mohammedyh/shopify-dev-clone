@@ -116,6 +116,10 @@ nav ul li:hover {
 	color: #202223;
 }
 
+[data-dropdown] {
+	cursor: pointer;
+}
+
 [data-dropdown-content] {
 	border-radius: 0.5rem;
 	margin-top: 0.4rem;
@@ -169,6 +173,10 @@ main p a {
 .header__navigation-left,
 .header__navigation-right {
 	display: flex;
+}
+
+.mobile-menu__container {
+	display: none;
 }
 
 .search-bar__container {
@@ -291,15 +299,14 @@ main p a {
 }
 
 .hero__illustration {
-	background: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/halloween/hero-1-2x-b0a493fe272b53baf44c27c7ff169ae2b563e346e46325262ca364c61c6cdd01.png')
+	background: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-1-2x-d81cd7a3d9160bebda546151484b74b4fab419286d81b53b102db37f10efa6fd.png')
 		no-repeat;
 	background-size: auto 1128px;
 	min-height: 1128px;
 }
 
 .hero__illustration--mobile,
-.hero__illustration-2--mobile,
-.hero__illustration-3--mobile {
+.hero__illustration-2--mobile {
 	display: none;
 	height: 365px;
 }
@@ -340,6 +347,7 @@ main p a {
 
 .stats-box__row {
 	display: flex;
+	position: relative;
 	align-items: center;
 }
 
@@ -350,6 +358,15 @@ main p a {
 .stats-box__row p {
 	margin-left: 1.5rem;
 	width: 13rem;
+}
+
+.stats-box__addon {
+	position: absolute;
+	left: 30px;
+	top: 40px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: monospace;
 }
 
 .community__container {
@@ -443,17 +460,37 @@ main p a {
 }
 
 .footer-nav__list {
+	margin: 0 auto;
+	width: 85vw;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1.2rem;
 	font-size: 14px;
 	font-weight: 600;
 	color: #5c5f62;
-	width: 85vw;
-	margin: 0 auto;
 }
 
 /* 1000px */
 @media screen and (max-width: 62.5rem) {
+	nav {
+		padding: 0 2.4rem;
+		height: 48px;
+	}
+
+	.navigation__left-container {
+		gap: 1.4rem;
+	}
+
+	.search-bar__container {
+		border: none;
+		padding: 0;
+	}
+
+	.search-bar__container input,
+	.search-bar__suffix {
+		display: none;
+	}
+
 	.hero {
 		grid-template-columns: 1fr;
 	}
@@ -467,22 +504,19 @@ main p a {
 	}
 
 	.hero__illustration--mobile,
-	.hero__illustration-2--mobile,
-	.hero__illustration-3--mobile {
+	.hero__illustration-2--mobile {
 		display: block;
 	}
 
 	.hero__illustration--mobile {
-		background: url('./img/hero-1-mobile.png') center center/cover no-repeat;
+		background: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-1-tablet-2x-604df177725e4b9aba5dc31e8c50a47a4937c540dcfed8a3c84868c94fb902fe.png')
+			center center/cover no-repeat;
 		order: -1;
 	}
 
 	.hero__illustration-2--mobile {
-		background: url('./img/hero-2-tablet.png') center center/cover no-repeat;
-	}
-
-	.hero__illustration-3--mobile {
-		background: url('./img/hero-3-tablet.png') center center/cover no-repeat;
+		background: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-3-tablet-2x-f0fffef5822f2dac2d2fc43abed433955c5c43ae45c7572de787545c6e4843ef.png')
+			center center/cover no-repeat;
 	}
 
 	.hero__content {
@@ -494,7 +528,7 @@ main p a {
 
 	.docs-banner {
 		padding: 4rem 2rem;
-		margin: 5rem auto 0;
+		margin: 3rem auto 0;
 		max-width: 50rem;
 	}
 
@@ -520,10 +554,24 @@ main p a {
 		max-width: 44rem;
 		margin: 2rem auto 0;
 	}
+
+	.footer__nav {
+		border-radius: 0;
+	}
 }
 
-/* 880px */
-@media screen and (max-width: 55rem) {
+/* 960px */
+@media screen and (max-width: 60rem) {
+	.mobile-menu__container {
+		display: flex;
+		cursor: pointer;
+	}
+
+	.header__navigation-left,
+	.header__navigation-right {
+		display: none;
+	}
+
 	.hero__heading {
 		font-size: 2rem;
 		letter-spacing: -0.9px;
@@ -559,10 +607,137 @@ main p a {
 
 	.footer__top {
 		border-radius: 0;
-		margin: 5rem 0;
+		margin: 5rem 0 0;
 	}
 
 	.footer__items-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
+}
+
+/** Dark Theme Styling **/
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4 {
+	color: #fff;
+}
+
+.theme-dark p {
+	color: #d7d7db;
+}
+
+.theme-dark a {
+	color: #b5c9fa;
+}
+
+.theme-dark nav {
+	background-color: #0d1213;
+}
+
+.theme-dark li a {
+	color: #d7d7db;
+}
+
+.theme-dark [data-dropdown-content] {
+	background-color: #151d1e;
+	border: 1px solid #24393d;
+}
+
+.theme-dark [data-dropdown-content] .nav__dropdown-description {
+	color: #8a8f93;
+}
+
+.theme-dark [data-dropdown-content] .nav__dropdown-item {
+	color: #d7d7db;
+}
+
+.theme-dark .nav__dropdown-item.nav__dropdown-item--seperated {
+	border-color: #24393d;
+}
+
+.theme-dark .nav__dropdown-item:hover {
+	background-color: #20292b;
+}
+
+.theme-dark .logo--dark,
+.theme-light .logo--dark {
+	display: block;
+}
+
+.theme-dark .logo--light,
+.theme-light .logo--dark {
+	display: none;
+}
+
+.theme-light .theme-light--icon,
+.theme-dark .theme-dark--icon {
+	display: none;
+}
+
+.theme-light .theme-dark--icon,
+.theme-dark .theme-light--icon {
+	display: block;
+}
+
+.theme-dark .search-bar__container,
+.theme-dark .search-bar__container input {
+	background-color: #151d1e;
+	border-color: #59767a;
+}
+
+.theme-dark .mobile-menu__container svg,
+.theme-dark .search-bar__container svg {
+	stroke: #fff;
+}
+
+.theme-dark .hero__illustration {
+	background-image: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-1-dark-2x-b7e0bfae17c91807e522279a15d85b5fba53857161b66ce4a8c6a9c0de1e8d7d.png');
+}
+
+.theme-dark .hero__illustration--mobile {
+	background-image: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-1-tablet-dark-2x-c5bf3771a3c48e435ff5ec07ca0c83d047a292f9b286b125e14153adf203e1cb.png');
+}
+
+.theme-dark .hero__illustration-2--mobile {
+	background-image: url('https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-3-tablet-dark-2x-fc9903c55243fd78d16359afb1d0097d48cbf85bb6db6207b1de305cfca6fb1b.png');
+}
+
+.theme-dark .docs-card,
+.theme-dark .community__link {
+	background-color: #151d1e;
+	border-color: #24393d;
+}
+
+.theme-dark .docs-banner {
+	border: 2px solid #8cfb80;
+	background-color: transparent;
+}
+
+.theme-dark .stats-box__container {
+	background-color: #151d1e;
+	border: 1px solid #24393d;
+	border-radius: 8px;
+	box-shadow: 0 4px 0 #000;
+}
+
+.theme-dark .stats-box__row strong {
+	color: #eef1f1;
+}
+
+.theme-dark .community__link--borderless {
+	background: transparent;
+	border: 2px solid #9db8f7;
+}
+
+.theme-dark .footer__top {
+	background-color: #151d1e;
+}
+
+.theme-dark .footer__nav {
+	background-color: #20292b;
+}
+
+.theme-dark .footer-nav__list-item a {
+	color: #8a8f93;
 }
