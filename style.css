@@ -65,7 +65,8 @@ body {
 }
 
 .hidden {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
 }
 
 img {
@@ -128,6 +129,7 @@ nav ul li:hover {
 	line-height: 2;
 	background: #fafbfb;
 	box-shadow: 0 5px 30px 5px rgba(66, 71, 76, 0.1);
+	transition: 150ms ease-in-out;
 }
 
 .nav__dropdown-item:hover {
