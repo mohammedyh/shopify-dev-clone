@@ -19,7 +19,7 @@ git clone https://github.com/mohammedyh/shopify-dev-clone.git
 Go to the project directory
 
 ```bash
-cd my-project
+cd shopify-dev-clone
 ```
 
 Open `index.html` in browser or run terminal command:
