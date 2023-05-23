@@ -2,6 +2,10 @@
 
 A clone of the Shopify Dev website - https://shopify.dev/
 
+### Note
+
+Shopify have updated their site. This [link](https://web.archive.org/web/20220616235150/https://shopify.dev/) displays what Shopify’s website looked like when I created this clone.
+
 ## Screenshots
 
 ![Main Screenshot](https://github.com/mohammedyh/shopify-dev-clone/blob/master/img/screenshot.png?raw=true)
